@@ -4,8 +4,6 @@ tasks:
     tasks:
       fmt:
         run: v cmd/tools/vfmt.v
-      prod:
-        run: v -prod self
   debug:
     tasks:
       fmt:
