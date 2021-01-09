@@ -29,5 +29,9 @@ tasks:
         run: v test vlib/v/fmt/fmt_test.v
       fmt-keep:
         run: v test vlib/v/fmt/fmt_keep_test.v
+      fmt-all:
+        run: |
+          z test fmt
+          z test fmt-keep
   fmt:
     run: v fmt -w
