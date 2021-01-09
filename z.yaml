@@ -25,6 +25,10 @@ tasks:
         run: |
           z test fmt
           z test fmt-keep
+      compiler:
+        tasks:
+          errors:
+            run: v test vlib/v/compiler_errors_test.v
   fmt:
     run: v fmt -w
     tasks:
