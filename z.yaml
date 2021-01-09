@@ -1,0 +1,33 @@
+default: run-main
+tasks:
+  fmt-cleancode:
+    run: |
+      cat cmd/tools/vtest-cleancode.v \
+      | head -n 80 | tail -n 60 \
+      | sed 's/\s//g' | grep -E "^'.*/.*',$" | sed "s/[',]//g" \
+      | xargs v fmt -w
+  build:
+    tasks:
+      fmt:
+        run: v cmd/tools/vfmt.v
+      prod:
+        run: v -prod self
+  debug:
+    tasks:
+      fmt:
+        run: v cmd/tools/vfmt.v && v fmt
+  run:
+    run: v run main.v
+  main:
+    run: v main.v
+  main.c:
+    run: v main.v -o main.c
+  test:
+    run: v test
+    tasks:
+      fmt:
+        run: v test vlib/v/fmt/fmt_test.v
+      fmt-keep:
+        run: v test vlib/v/fmt/fmt_keep_test.v
+  fmt:
+    run: v fmt -w
