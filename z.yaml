@@ -1,9 +1,7 @@
 default: run-main
 tasks:
-  build:
-    tasks:
-      fmt:
-        run: v cmd/tools/vfmt.v
+  build.fmt:
+    run: v cmd/tools/vfmt.v
   debug.fmt:
     run: v cmd/tools/vfmt.v && v fmt
   run:
