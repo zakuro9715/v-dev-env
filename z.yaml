@@ -36,6 +36,6 @@ tasks:
       cleancode:
         run: |
           cat cmd/tools/vtest-cleancode.v \
-          | head -n 80 | tail -n 60 \
+          | head -n 75 | tail -n 60 \
           | sed 's/\s//g' | grep -E "^'.*/.*',$" | sed "s/[',]//g" \
           | xargs v fmt -w
