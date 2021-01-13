@@ -4,10 +4,8 @@ tasks:
     tasks:
       fmt:
         run: v cmd/tools/vfmt.v
-  debug:
-    tasks:
-      fmt:
-        run: v cmd/tools/vfmt.v && v fmt
+  debug.fmt:
+    run: v cmd/tools/vfmt.v && v fmt
   run:
     run: v run main.v
   main:
