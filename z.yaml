@@ -10,7 +10,7 @@ tasks:
     run: v run main.v
   main:
     run: v main.v
-  main.c:
+  mainc:
     run: v main.v -o main.c
   test:
     run: v test
