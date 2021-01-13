@@ -30,6 +30,8 @@ tasks:
         tasks:
           errors:
             run: v test vlib/v/compiler_errors_test.v
+  check-md:
+    run: v run cmd/tools/check-md.v -all
   fmt:
     run: v fmt -w
     tasks:
