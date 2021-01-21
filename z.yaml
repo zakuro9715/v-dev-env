@@ -2,7 +2,7 @@ tasks:
   self:
     run: v self
   build.fmt: v cmd/tools/vfmt.v
-  debug.fmt: v cmd/tools/vfmt.v && v fmt
+  debug.fmt: z build fmt && v fmt
   run: v run main.v
   main: v main.v
   mainc: v main.v -o main.c
