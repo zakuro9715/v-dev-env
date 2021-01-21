@@ -1,6 +1,5 @@
 tasks:
-  self:
-    run: v self
+  self: v self
   build:
     run: v
     args:
