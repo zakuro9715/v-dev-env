@@ -20,6 +20,7 @@ tasks:
       fmt-all: |
         z test fmt
         z test fmt-keep
+      checker: z test compiler errors
       compiler:
         run: v test vlib/v/tests
         tasks:
