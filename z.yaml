@@ -1,6 +1,7 @@
 tasks:
   sync: git sync && v self
   self: v self
+  check: v -check-syntax
   vmaster:
     - make latest_vc latest_tcc
     - clang -o vmaster vc/v.c
