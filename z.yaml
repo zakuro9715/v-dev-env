@@ -1,4 +1,5 @@
 tasks:
+  sync: git sync && v self
   self: v self
   build:
     run: v
