@@ -1,4 +1,6 @@
+default: v
 tasks:
+  v: v
   sync: git sync && v self
   self: v self
   check: v -check-syntax
@@ -12,7 +14,7 @@ tasks:
     tasks:
       fmt: v cmd/tools/vfmt.v
   debug.fmt: z build fmt && v fmt
-  run: v run main.v
+  run: v run
   main: v main.v
   mainc: v main.v -o main.c
   test:
