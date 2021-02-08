@@ -41,3 +41,10 @@ tasks:
         | head -n 75 | tail -n 60 \
         | sed 's/\s//g' | grep -E "^'.*/.*',$" | sed "s/[',]//g" \
         | xargs v fmt -w
+  inspect.ast: vspect ast
+  inspect.tokens: vspect tokens
+  ast:
+    z: inspect.ast
+  tokens:
+    z: inspect.tokens
+
