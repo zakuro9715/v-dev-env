@@ -37,6 +37,7 @@ tasks:
         tasks:
           errors: v test vlib/v/compiler_errors_test.v
   check-md: v run cmd/tools/check-md.v -all
+  rm.tmp: rm vlib/**/__vtool_tmp__.*
   fmt:
     run: v fmt -w
     tasks:
