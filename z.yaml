@@ -1,4 +1,5 @@
 default: v
+shell: zsh
 tasks:
   v: v
   sync: git sync && v self
