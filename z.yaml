@@ -39,7 +39,7 @@ tasks:
   check-md: v check-md .
   rm.tmp: rm vlib/**/__vtool_tmp__.*
   fmt:
-    run: v fmt -w
+    run: v fmt
     tasks:
       cleancode: |
         cat cmd/tools/vtest-cleancode.v \
