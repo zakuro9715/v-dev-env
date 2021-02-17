@@ -1,7 +1,7 @@
 default: v
 shell: zsh
 tasks:
-  v: v
+  v: source ~/.zsh/commands.zsh && VMASTER=$VMASTER v-wrapper
   sync: git sync && v self
   self: v self
   check: v -check-syntax
