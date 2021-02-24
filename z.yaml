@@ -48,8 +48,6 @@ tasks:
         | xargs v fmt -w
   inspect.ast: vspect ast
   inspect.tokens: vspect tokens
-  ast:
-    z: inspect.ast
-  tokens:
-    z: inspect.tokens
+  ast: z inspect.ast
+  tokens: z inspect.tokens
 
