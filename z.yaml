@@ -8,6 +8,8 @@ tasks:
   vmaster:
     - make latest_vc latest_tcc
     - clang -o vmaster vc/v.c
+  vexe:
+    - vmaster -os windows -o v.exe self
   repair:
     - z vmaster
     - cp vmaster v
