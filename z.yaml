@@ -1,10 +1,10 @@
 default: v
 shell: zsh
 tasks:
-  v: source ~/.zsh/commands.zsh && VMASTER=$VMASTER v-wrapper
+  v: source ~/.zsh/commands.zsh && VMASTER=$VMASTER v-wrapper $@
   sync: git sync && v self
   self: v self
-  check: v -check-syntax
+  check: v -check-syntax $@
   vmaster:
     - make latest_vc latest_tcc
     - clang -o vmaster vc/v.c
@@ -14,17 +14,17 @@ tasks:
     - z vmaster
     - cp vmaster v
   build:
-    run: v
+    run: v $@
     args:
       default: main.v
     tasks:
       fmt: v cmd/tools/vfmt.v
-  debug.fmt: z build fmt && v fmt
-  run: v run
+  debug.fmt: z build fmt && v fmt $@
+  run: v run $@
   main: v main.v
   mainc: v main.v -o main.c
   test:
-    run: v test
+    run: v test $@
     tasks:
       fmt:
         v test vlib/v/fmt/fmt_test.v
@@ -41,7 +41,7 @@ tasks:
   check-md: v check-md .
   rm.tmp: rm **/__vtool_tmp__.*
   fmt:
-    run: v fmt
+    run: v fmt $@
     tasks:
       cleancode: |
         cat cmd/tools/vtest-cleancode.v \
