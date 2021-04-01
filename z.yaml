@@ -34,6 +34,8 @@ tasks:
         z test fmt
         z test fmt-keep
       checker: z test compiler errors
+      checker.write:
+        run: v $1 2> "$(echo $1 | sed 's/\.vv/.out/g')" || true
       compiler:
         run: v test vlib/v/tests
         tasks:
